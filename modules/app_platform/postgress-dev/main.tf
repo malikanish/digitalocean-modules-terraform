@@ -6,6 +6,7 @@ resource "digitalocean_database_cluster" "postgres" {
   region     = var.postgres_config.region   
   node_count = var.postgres_config.node_count
    private_network_uuid = var.vpc_id 
+  project_id = var.project_id
   tags = [
     "${var.prefix_name}-${var.postgres_config.name}"
   ]

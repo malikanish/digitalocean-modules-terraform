@@ -64,3 +64,6 @@ variable "postgres_db_config" {
 
 variable "vpc_config" {
 }
+variable "project_config" {
+
+}

@@ -6,6 +6,7 @@ resource "digitalocean_database_cluster" "kafka" {
   region     = var.kafka_config.region
   node_count = var.kafka_config.node_count
     private_network_uuid = var.vpc_id 
+    project_id = var.project_id
   tags = [
   "${var.prefix_name}-${var.kafka_config.name}"
 ]

@@ -14,6 +14,7 @@ module "mysql_dev" {
   mysql_user_config = var.mysql_user_config
   mysql_db_config   = var.mysql_db_config
   vpc_id            = module.vpc_dev.vpc_id
+  project_id        = module.project_dev.project_id
 }
 
 module "managed_kafka" {
@@ -22,7 +23,8 @@ module "managed_kafka" {
   kafka_config      = var.kafka_config
   kafka_user_config = var.kafka_user_config
   kafka_db_config   = var.kafka_db_config
-   vpc_id            = module.vpc_dev.vpc_id
+  vpc_id            = module.vpc_dev.vpc_id
+  project_id        = module.project_dev.project_id
 }
 
 module "mongodb_dev" {
@@ -33,7 +35,8 @@ module "mongodb_dev" {
   mongodb_config      = var.mongodb_config
   mongodb_user_config = var.mongodb_user_config
   mongodb_db_config   = var.mongodb_db_config
-  vpc_id            = module.vpc_dev.vpc_id
+  vpc_id              = module.vpc_dev.vpc_id
+  project_id          = module.project_dev.project_id
 }
 module "postgres_dev" {
   source      = "../modules/app_platform/postgress-dev"
@@ -42,10 +45,15 @@ module "postgres_dev" {
   postgres_config      = var.postgres_config
   postgres_user_config = var.postgres_user_config
   postgres_db_config   = var.postgres_db_config
-   vpc_id            = module.vpc_dev.vpc_id
+  vpc_id               = module.vpc_dev.vpc_id
+  project_id           = module.project_dev.project_id
 
 }
 module "vpc_dev" {
   source     = "../modules/app_platform/vpc-dev"
   vpc_config = var.vpc_config
+}
+module "project_dev" {
+  source         = "../modules/app_platform/project-dev"
+  project_config = var.project_config
 }

@@ -6,6 +6,7 @@ resource "digitalocean_database_cluster" "mysql" {
   region     = var.mysql_config.region
   node_count = var.mysql_config.node_count
   private_network_uuid = var.vpc_id 
+  project_id = var.project_id
 tags = [
   "${var.prefix_name}-${var.mysql_config.name}"
 ]

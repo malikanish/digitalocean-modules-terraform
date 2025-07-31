@@ -19,3 +19,6 @@ variable "prefix_name" {
   
 }
 variable "vpc_id" {}
+variable "project_id" {
+  
+}

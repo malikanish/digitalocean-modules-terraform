@@ -97,3 +97,10 @@ vpc_config = {
   region   = "nyc1"
   ip_range = "10.10.0.0/16"
 }
+
+project_config = {
+  name        = "anish-project"
+  description = "DigitalOcean Terraform simple project"
+  purpose     = "Web Hosting"
+  environment = "Development"
+}

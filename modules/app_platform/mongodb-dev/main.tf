@@ -6,6 +6,7 @@ resource "digitalocean_database_cluster" "mongodb" {
   region     = var.mongodb_config.region
   node_count = var.mongodb_config.node_count
   private_network_uuid = var.vpc_id 
+  project_id = var.project_id
   
 tags = [
   "${var.prefix_name}-${var.mongodb_config.name}"
