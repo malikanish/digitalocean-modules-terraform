@@ -3,6 +3,7 @@ resource "digitalocean_app" "app" {
     name   = var.app.app_name
     region = var.app.region
 
+  
     service {
       name = var.app.name
 

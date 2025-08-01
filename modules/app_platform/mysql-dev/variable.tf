@@ -22,3 +22,6 @@ variable "vpc_id" {}
 variable "project_id" {
   
 }
+variable "domain" {
+  
+}

@@ -24,3 +24,9 @@ resource "digitalocean_database_db" "mysql_db" {
   name       = "${var.prefix_name}-${var.mysql_db_config.db_name}"
 }
 
+resource "digitalocean_record" "mysql_db_record" {
+  domain = var.domain
+  type   = "CNAME"
+  name   = "db" 
+  value  = digitalocean_database_cluster.mysql.host
+}

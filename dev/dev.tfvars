@@ -104,3 +104,26 @@ project_config = {
   purpose     = "Web Hosting"
   environment = "Development"
 }
+
+project_id-dev = "Ab123467"
+domain_name= "anishtech.com"
+
+domain_name_value = {
+  name = "anishtech.com"
+  type = "A"
+  value = "123.456.789.012" 
+}
+
+
+web_domain = {
+  name = "web.anishtech.com"
+  type = "A"
+  value = "123.456.789.012"  
+}
+
+api_domain = {
+  name = "api.anishtech.com"
+  type = "CNAME"
+  value = "api.anishtech.com"
+}
+
